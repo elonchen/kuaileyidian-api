@@ -1,0 +1,31 @@
+{
+  "name": "kuaileyidian-api",
+  "version": "1.0.0",
+  "description": "快乐一点扫码点餐数据API子系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erping123/kuaileyidian-api.git"
+  },
+  "keywords": [
+    "快乐一点",
+    "kuaileyidian",
+    "扫码，点餐"
+  ],
+  "author": "Chen Aiping",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erping123/kuaileyidian-api/issues"
+  },
+  "homepage": "https://github.com/erping123/kuaileyidian-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
