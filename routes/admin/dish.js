@@ -72,9 +72,7 @@ function randFileName(suffix){
 router.post('/',(req,res)=>{
   pool.query('INSERT INTO klyd_dish SET ?',req.body,(err,result)=>{
     if(err) throw err;
-    if(result.affectedRows>0){
-      res.send({code:200,msg:'dish added succ',dishId:46});
-    }
+      res.send({code:200,msg:'dish added succ',dishId:result.insertId});
   })
 })
 
