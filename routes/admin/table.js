@@ -9,6 +9,6 @@
 router.get('/',(req,res)=>{
   pool.query('SELECT * FROM klyd_table ORDER BY tid',(err,result)=>{
     if(err) throw err;
-    res.send(result);
+    res.send(result.data);
   })
 })
