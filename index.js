@@ -13,6 +13,9 @@ const tableRouter=require('./routes/admin/table');
 const settingsRouter=require('./routes/admin/settings');
 
 
+
+
+
 // 创建HTTP应用服务器
 var app=express();
 app.listen(PORT,()=>{
@@ -31,3 +34,4 @@ app.use('/admin',adminRouter);
 app.use('/admin/dish',dishRouter);
 app.use('/admin/table',tableRouter);
 app.use('/admin/settings',settingsRouter);
+

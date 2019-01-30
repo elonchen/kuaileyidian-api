@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
   <button id="bt2">修改全局设置信息</button>
   <script src="./axios.min.js"></script>
   <script>
-    bt1.onclick = function(){
+    bt1.onclick=function(){
       axios.get('http://127.0.0.1:8090/admin/settings').then((result)=>{
         console.log(result.data);
       }).catch((err)=>{
@@ -19,15 +19,14 @@
       })
     }
 
-    bt2.onclick = function(){
-      var data = {"sid":1,"appName":"小肥牛II","apiUrl":"http://127.0.0.1:8090","adminUrl":"http://127.0.0.1:8091","appUrl":"http://127.0.0.1:8092","icp":"京ICP备12003709号-3","copyright":"Copyright © 北京达内金桥科技有限公司版权所有"};
-      axios.put('http://127.0.0.1:8090/admin/settings', data).then((result)=>{
+    bt2.onclick=function(){
+      var data={sid:1,appName:'快乐一点',apiUrl:'http://127.0.0.1:8090',adminUrl:'http://127.0.0.1:8091',appUrl:'http://127.0.0.1:8092',icp:'京ICP备 18016421号-1',copyright:'Copyright © 北京大内'};
+      axios.put('http://127.0.0.1:8090/admin/settings',data).then((result)=>{
         console.log(result.data);
       }).catch((err)=>{
         console.log(err);
       })
     }
-
   </script>
 </body>
-</html> 
+</html>

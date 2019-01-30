@@ -7,18 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  <button id="bt1">获取所有桌台信息</button>
-  <script src="./axios.min.js"></script>
-<script>
-  bt1.onclick=function(){
-    //var data={aname:'admin',apwd:'123456'};
-    axios.get('http://127.0.0.1:8090/admin/table').then((result)=>{
-      console.log('获取所有桌台信息成功：');
-      console.log(result.data);
-    }).catch((err)=>{
-      console.log(err);
-    })
-  }
-</script>
+  
 </body>
 </html>
