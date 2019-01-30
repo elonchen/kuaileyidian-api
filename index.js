@@ -10,6 +10,7 @@ const categoryRouter=require('./routes/admin/category');
 const adminRouter=require('./routes/admin/admin');
 const dishRouter=require('./routes/admin/dish');
 const tableRouter=require('./routes/admin/table');
+const settingsRouter=require('./routes/admin/settings');
 
 
 // 创建HTTP应用服务器
@@ -29,3 +30,4 @@ app.use('/admin/category',categoryRouter);
 app.use('/admin',adminRouter);
 app.use('/admin/dish',dishRouter);
 app.use('/admin/table',tableRouter);
+app.use('/admin/settings',settingsRouter);

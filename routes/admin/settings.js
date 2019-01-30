@@ -12,8 +12,8 @@ module.exports = router;
 *返回数据：
 *   {appName:'xx', adminUrl:'xx', appUrl:'xx',...}
 */
-router.get('/', (req, res)=>{
-  pool.query('SELECT * FROM xfn_settings LIMIT 1', (err, result)=>{
+router.get('/', (req,res)=>{
+  pool.query('SELECT * FROM klyd_settings LIMIT 1', (err, result)=>{
     if(err)throw err;
     res.send(result[0]);
   })
@@ -26,8 +26,8 @@ router.get('/', (req, res)=>{
 *返回数据：
 *   {code:200, msg: 'settings updated succ'}
 */
-router.put('/', (req, res)=>{
-  pool.query('UPDATE xfn_settings SET ?', req.body, (err, result)=>{
+router.put('/', (req,res)=>{
+  pool.query('UPDATE klyd_settings SET ?', req.body, (err, result)=>{
     if(err)throw err;
     res.send({code:200, msg:'settings updated succ'});
   })
