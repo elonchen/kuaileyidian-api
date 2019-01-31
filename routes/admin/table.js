@@ -23,6 +23,12 @@ router.get('/',(req,res)=>{
 * {code:200,msg:'require revervation succ'}
 * {code:400,mag:'revervation not exits'}
 */
+router.get('/reservation/:tid',(req,res)=>{
+  pool.query('SELECT * FROM klyd_reservation WHERE tableId=?',req.params.tid,(err,result)=>{
+    if(err) throw err;
+    res.send(result);
+  })
+})
 
 /**
 * GET  /admin/table/inuse/:tid
@@ -31,6 +37,12 @@ router.get('/',(req,res)=>{
 * {code:200,msg:'require inuse succ'}
 * {code:400,msg:'inuse not exits'}
 */
+router.get('/inuse/:tid',(req,res)=>{
+  pool.query('SELECT * FROM klyd_reservation WHERE tableId=?',req.params.tid,(err,result)=>{
+    if(err) throw err;
+    res.send(result);
+  })
+})
 
 /**
  * PATCH   /admin/table
@@ -39,6 +51,14 @@ router.get('/',(req,res)=>{
  * {code:200,msg:'update table succ'}
  * {code:400,msg:'table not exits'}
  */
+// router.patch('/',(req,res)=>{
+//   pool.query('UPDATE klyd_table SET  ?',req.body,(err,result)=>{
+//     if(err) throw err;
+//     if(result.affectedRows>0){
+//       res.send({code:200,msg:'updated table succ'});
+//     }
+//   })
+// })
 
 /**
  * POST    /admin/table

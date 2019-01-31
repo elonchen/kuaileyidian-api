@@ -35,7 +35,7 @@ CREATE TABLE klyd_table(
   tid   INT PRIMARY KEY AUTO_INCREMENT COMMENT "桌台编号",
   tname   VARCHAR(64) COMMENT "桌台昵称",
   type   VARCHAR(16) COMMENT "桌台类型 如3-4人桌",
-  status   INT COMMENT "当前状态"
+  status   INT COMMENT "当前状态" #1 "空闲" 2 "占用" 3  "预约"  4   "其它"
 );
 INSERT INTO klyd_table VALUES
 (1,'福满堂','6-8人桌',1),

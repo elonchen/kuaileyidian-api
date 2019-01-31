@@ -23,7 +23,26 @@
         })
       }
       bt2.onclick=function(){
-        
+        axios.get('http://127.0.0.1:8090/admin/table/reservation/1').then((result)=>{
+          console.log(result.data);
+        }).catch((err)=>{
+          console.log(err);
+        })
+      }
+      bt3.onclick=function(){
+        axios.get('http://127.0.0.1:8090/admin/table/inuse/2').then((result)=>{
+          console.log(result.data);
+        }).catch((err)=>{
+          console.log(err);
+        })
+      }
+      bt4.onclick=function(){
+        var data={tid:1,tname:'福满堂',type:'6-8人桌',status:2};
+        axios.patch('http://127.0.0.1:8090/admin/table',data).then((result)=>{
+          console.log(result.data);
+        }).catch((err)=>{
+          console.log(err);
+        })
       }
     </script>
 </body>

@@ -57,7 +57,7 @@ router.post('/',(req,res)=>{
   pool.query('INSERT INTO klyd_category SET ?',data,(err,result)=>{
     if(err) throw err;
     if(result.affectedRows>0){
-      res.send({code:200,msg:'1 category added'});
+      res.send({code:200,msg:'1 category added',cid:result.insertId});
     }else{
       res.send({code:400,msg:'0 category added'});
     }
