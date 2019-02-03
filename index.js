@@ -1,8 +1,8 @@
 /*快乐一点*/
 console.log('准备启动API服务器...');
 console.log(new Date().toLocaleString());
-//const PORT=8090;
-const PORT=5050; 
+const PORT=8090;
+//const PORT=5050; 
 const express=require("express");
 // 引入中间件
 const cors=require('cors');
